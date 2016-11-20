@@ -1,6 +1,6 @@
 var projects = [];
 
-function Project () {
+function Project (title, dateCreated, image, fileSource) {
   this.title = title;
   this.dateCreated = dateCreated;
   this.image = image;
@@ -14,5 +14,14 @@ Project.prototype.toHtml = function() {
   $newProject.attr('.date-created', this.dateCreated);
   $newProject.attr('src', this.image);
   $newProject.attr('href', this.fileSource); //need to chain .html jQ method on?
-
+  $newProject.removeClass('template');
+  return $newProject;
 };
+
+projectInfo.forEach(function(currentProject) {
+  projects.push(new Project(currentProject));
+});
+
+projects.forEach(function(project) {
+  $('#projects').append(project.toHtml());
+});
