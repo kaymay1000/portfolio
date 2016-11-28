@@ -3,23 +3,42 @@
 <head>
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="module.css">
-  <!--Need to link all three CSS files?-->
-  <!-- Correct place for link tags? -->
+  <link rel="stylesheet" href="layout.css">
+  <script src="marked.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <!-- Need rel attribute? -->
+  <!-- /*<style>a{text-decoration:none}</style>*/ -->
+  <!-- Use above line of code or use line in module.css to remove link underline?-->
 </head>
 <body>
   <header>
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-item" data-content="projects"><a href="#">My Projects</a></li>
+        <li class="nav-item" data-content="aboutMe"><a href="#">About Me</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
-  <section id="projects">
+  <section id="projects" class="tab-content">
     <article class="template">
       <a href="project source">Project Title</a>
-      <p class="date-created"></p>
+      <p class="date-created">Date Created: </p>
       <img src="relevant image">
+      <p class="description">About this Project</p>
     </article>
   </section>
+  <section id="aboutMe" class="tab-content">
+    <header>Kaylee Alvarado</header>
+    <p>Professional Software Developer in Training</p>
+    <section>
+      <h1>A little bit about me:</h1>
+      <ul>
+        <li>I can write HTML/CSS and JavaScript.</li>
+        <li>I enjoy learning new things.</li>
+      </ul>
+    </section>
 </main>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="projectInfo.js"></script>
   <script src="portfolio.js"></script>
 </body>
