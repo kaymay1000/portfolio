@@ -4,17 +4,12 @@
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="module.css">
   <link rel="stylesheet" href="layout.css">
-  <script src="marked.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- Need rel attribute? -->
-  <!-- /*<style>a{text-decoration:none}</style>*/ -->
-  <!-- Use above line of code or use line in module.css to remove link underline?-->
 </head>
 <body>
   <header>
     <nav class="main-nav">
       <ul>
-        <li class="nav-item" data-content="projects"><a href="#">My Projects</a></li>
+         <li class="nav-item" data-content="projects"><a href="#">My Projects</a></li>
         <li class="nav-item" data-content="aboutMe"><a href="#">About Me</a></li>
       </ul>
     </nav>
@@ -22,10 +17,10 @@
   <main>
   <section id="projects" class="tab-content">
     <article class="template">
-      <a href="project source">Project Title</a>
-      <p class="date-created">Date Created: </p>
-      <img src="relevant image">
-      <p class="description">About this Project</p>
+      <a href="project source">{{ title }}</a>
+      <p class="date-created">Date Created: {{ dateCreated }}</p>
+      <img src="{{ image }}">
+      <p class="description">About this Project: {{ description }}</p>
     </article>
   </section>
   <section id="aboutMe" class="tab-content">
@@ -39,6 +34,8 @@
       </ul>
     </section>
 </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="projectInfo.js"></script>
   <script src="portfolio.js"></script>
 </body>
