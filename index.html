@@ -4,36 +4,52 @@
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="module.css">
   <link rel="stylesheet" href="layout.css">
+  <script id="template" type="text/x-handlebars-template">
+    <article>
+      <p>{{title}}</p>
+      <p>Date Created: {{dateCreated}}</p>
+      <img src="{(image}}">
+      <p>About this Project: {{description}}</p>
+    </article>
+  </script>
 </head>
 <body>
   <header>
+    <section id=header>
+      <h1>Kaylee Alvarado</h1>
+      <p>Software Developer in the Making</p>
+    </section>
     <nav class="main-nav">
-      <ul>
-         <li class="nav-item" data-content="projects"><a href="#">My Projects</a></li>
-        <li class="nav-item" data-content="aboutMe"><a href="#">About Me</a></li>
-      </ul>
+        <ul>
+          <li class="nav-item" data-content="home"><a href="#">Home</a></li>
+          <li class="nav-item" data-content="projects"><a href="#">My Projects</a></li>
+          <li class="nav-item" data-content="aboutMe"><a href="#">About Me</a></li>
+          <li class="nav-item" data-content="contactMe"><a href="#">Contact Me</a></li>
+        </ul>
     </nav>
   </header>
   <main>
-  <section id="projects" class="tab-content">
-    <article class="template">
-      <a href="project source">{{ title }}</a>
-      <p class="date-created">Date Created: {{ dateCreated }}</p>
-      <img src="{{ image }}">
-      <p class="description">About this Project: {{ description }}</p>
-    </article>
-  </section>
-  <section id="aboutMe" class="tab-content">
-    <header>Kaylee Alvarado</header>
-    <p>Professional Software Developer in Training</p>
-    <section>
+    <section id="home" class="tab-content">
+      <h1>Welcome to my Site!</h1>
+      <p>Thanks for stopping by.</p>
+      <p>Click around to check out some of the work I've done through Code Fellows, a software development program based in Seattle, WA.</p>
+    </section>
+    <section id="projects" class="tab-content"></section>
+    <section id="aboutMe" class="tab-content">
       <h1>A little bit about me:</h1>
       <ul>
         <li>I can write HTML/CSS and JavaScript.</li>
         <li>I enjoy learning new things.</li>
       </ul>
     </section>
-</main>
+    <section id="contactMe" class="tab-content">
+      <h1>Contact Me</h1>
+      <p>If you have any inquires about my work, I can be reached at any of the following. Thanks for reaching out!</p>
+      <p>Phone: (206) 948-8950</p>
+      <p>Email: kaymay1000@gmail.com</p>
+    </section>
+  </main>
+  <footer>KMA's Software Development Portfolio | &copy; 2016</footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="projectInfo.js"></script>
