@@ -1,7 +1,6 @@
 'use strict';
 
 var projects = [];
-var wholePortfolio = {};
 
 function Project (obj) {
   this.title = obj.title;
@@ -26,12 +25,10 @@ Project.prototype.toHtml = function() {
   return temp(this);
 };
 
-projectInfo.forEach(function(project) {
-  projects.push(new Project(project));
+projectInfo.forEach(function(currentProject) {
+  projects.push(new Project(currentProject));
 });
 
 projects.forEach(function(project) {
   $('#projects').append(project.toHtml());
 });
-
-wholePortfolio.handleMainNav();
