@@ -3,12 +3,12 @@
 var projects = [];
 var wholePortfolio = {};
 
-function Project (title, dateCreated, image, description) {
-  this.title = title;
-  this.dateCreated = dateCreated;
-  this.image = image;
-  this.description = description;
-  // this.fileSource = fileSource;
+function Project (obj) {
+  this.title = obj.title;
+  this.dateCreated = obj.dateCreated;
+  this.image = obj.image;
+  this.description = obj.description;
+  // this.fileSource = obj.fileSource;
 }
 
 Project.prototype.toHtml = function() {
@@ -17,16 +17,8 @@ Project.prototype.toHtml = function() {
   return temp(this);
 };
 
-wholePortfolio.handleMainNav = function() {
-  $('.main-nav').on('click', '.nav-item', function(e) {
-    $('.tab-content').hide();
-    $(`#${$(this).data('content')}`).fadeIn(500);
-  });
-  $('.main-nav .nav-item:first').click();
-};
-
-projectInfo.forEach(function(currentProject) {
-  projects.push(new Project(currentProject));
+projectInfo.forEach(function(project) {
+  projects.push(new Project(project));
 });
 
 projects.forEach(function(project) {
