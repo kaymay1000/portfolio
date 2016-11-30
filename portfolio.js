@@ -1,28 +1,28 @@
 'use strict';
 
 var projects = [];
-var wholePortfolio = {};
 
-function Project (title, dateCreated, image, description) {
-  this.title = title;
-  this.dateCreated = dateCreated;
-  this.image = image;
-  this.description = description;
-  // this.fileSource = fileSource;
+function Project (obj) {
+  this.title = obj.title;
+  this.dateCreated = obj.dateCreated;
+  this.image = obj.image;
+  this.description = obj.description;
+  // this.fileSource = obj.fileSource;
 }
 
 Project.prototype.toHtml = function() {
-  var htmlTemp = $('#template').html();
+  // var $newProject = $('.project-template').clone();
+  // $newProject.find('#title').text(this.title);
+  // $newProject.find('#date-created').text(this.dateCreated);
+  // $newProject.find('img').attr('src', this.image);
+  // $newProject.find('#description').text(this.description);
+  // // $newProject.attr('href', this.fileSource); //need to chain .html jQ method on?
+  // $newProject.removeClass('.project-template');
+  // return $newProject;
+
+  var htmlTemp = $('#template').html(); //#template refers to the ID of the Handlebars script tag right above the HTML template
   var temp = Handlebars.compile(htmlTemp); //Handlebars.compile returns a function, so we store it in a variable, pass 'this' into it (next line), and return it.
   return temp(this);
-};
-
-wholePortfolio.handleMainNav = function() {
-  $('.main-nav').on('click', '.nav-item', function(e) {
-    $('.tab-content').hide();
-    $(`#${$(this).data('content')}`).fadeIn(500);
-  });
-  $('.main-nav .nav-item:first').click();
 };
 
 projectInfo.forEach(function(currentProject) {
@@ -32,5 +32,3 @@ projectInfo.forEach(function(currentProject) {
 projects.forEach(function(project) {
   $('#projects').append(project.toHtml());
 });
-
-wholePortfolio.handleMainNav();

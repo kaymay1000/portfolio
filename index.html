@@ -5,11 +5,11 @@
   <link rel="stylesheet" href="module.css">
   <link rel="stylesheet" href="layout.css">
   <script id="template" type="text/x-handlebars-template">
-    <article>
-      <p>{{title}}</p>
-      <p>Date Created: {{dateCreated}}</p>
-      <img src="{(image}}">
-      <p>About this Project: {{description}}</p>
+    <article class="project-template">
+      <p id="title">{{title}}</p>
+      <p id="date-created">Date Created: {{dateCreated}}</p>
+      <img src="{{image}}">
+      <p id="description">About this Project: {{description}}</p>
     </article>
   </script>
 </head>
@@ -53,6 +53,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="projectInfo.js"></script>
+  <script src="projectView.js"></script>
   <script src="portfolio.js"></script>
 </body>
 </html>
