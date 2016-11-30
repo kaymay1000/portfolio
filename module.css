@@ -1,17 +1,47 @@
-.template {
-  display: none;
+html {
+  min-height: 100%;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+body {
+  background-color: plum; /*For browsers that don't support the linear-gradient property*/
+  background-image: linear-gradient(white, lavender, plum, orchid);
+}
+#header {
+  text-align: center;
+  font-family: cursive;
+  font-family: 'Amatic SC', cursive;
+}
+#header > h1 {
+  font-weight: bold;
+  margin: 10px 0px;
+  font-size: 60px;
+}
+
+#header > p {
+  font-weight: bold;
+  margin: 5px 0px;
+  font-size: 30px;
+}
+
+nav {
+  padding: 15px;
+  width: 550px;
+  margin: 0 auto;
 }
 .nav-item {
   list-style: none;
   display: inline;
-  font-family: cursive;
   font-size: 25px;
-  background-color: lightgreen;
+  font-weight: bold;
+  background-color: lightgrey;
   margin: 15px;
   padding: 4px;
   border-style: solid;
   border-radius: 12px;
-  border-color: darkgreen;
+  border-color: grey;
+}
+#home > h1 {
+  font-size: 45px;
 }
 a:link, a:visited{
   color: black;
