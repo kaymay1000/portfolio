@@ -23,3 +23,28 @@ projectInfo.forEach(function(currentProject) {
 projects.forEach(function(project) {
   $('#projects').append(project.toHtml());
 });
+
+Project.loadAll() = function(projects) {
+  projects.forEach(function(ele) {
+    projects.push(new Project(ele));
+  });
+};
+
+Project.fetchAll() = function() {
+  if (localStorage.projectInfo) {
+    var lsProject = JSON.parse(localStorage.getItem('projectInfo'));
+    Project.loadAll(lsProject);
+    console.log("First part worked");
+  } else {
+    $getJSON('projectInfo.json').then(
+      function(data) {
+        localStorage.setItem('projectInfo', JSON.stringify(data));
+        Project.loadAll(data);
+        console.log("2nd part worked!");
+      }
+    );
+  };
+};
+
+Project.loadAll();
+Project.fetchAll();
