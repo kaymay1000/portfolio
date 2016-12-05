@@ -1,5 +1,7 @@
 'use strict';
 
+(function(module) {
+
 var projects = [];
 
 function Project (obj) {
@@ -48,3 +50,6 @@ Project.fetchAll() = function() {
 
 Project.loadAll();
 Project.fetchAll();
+module.Project = Project;
+
+})(window);
