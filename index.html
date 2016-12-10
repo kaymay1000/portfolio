@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="base.css">
-  <link rel="stylesheet" href="module.css">
-  <link rel="stylesheet" href="layout.css">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/module.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
   <script id="template" type="text/x-handlebars-template">
     <article class="project-template">
-      <p id="title">{{title}}</p>
+      <a src="{{fileSource}}" id="title">{{title}}</a>
       <p id="date-created">Date Created: {{dateCreated}}</p>
       <img src="{{image}}">
       <p id="description">About this Project: {{description}}</p>
@@ -17,7 +17,7 @@
 </head>
 <body>
   <header>
-    <section id=header>
+    <section id="header">
       <h1>Kaylee Alvarado</h1>
       <p>Software Developer in the Making</p>
     </section>
@@ -55,9 +55,7 @@
   <footer>KMA's Software Development Portfolio | &copy; 2016</footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-  <script src="projectInfo.json"></script>
-  <script src="projectInfo.js"></script>
-  <script src="projectView.js"></script>
-  <script src="portfolio.js"></script>
+  <script src="scripts/models/portfolio.js"></script>
+  <script src="scripts/views/projectView.js"></script>
 </body>
 </html>
