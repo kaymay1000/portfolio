@@ -19,7 +19,7 @@
   };
 
   Project.loadAll = function(projects) {
-    Project.allProjects.forEach(function(ele) {
+    projects.forEach(function(ele) {
       Project.allProjects.push(new Project(ele));
     });
   };
@@ -28,13 +28,11 @@
     if (localStorage.projectInfo) {
       var lsProject = JSON.parse(localStorage.getItem('projectInfo'));
       Project.loadAll(lsProject);
-      console.log('First part worked');
     } else {
-      $.getJSON('/data/projectInfo.json').then(
+      $.getJSON('../../data/projectInfo.json').then(
         function(data) {
           localStorage.setItem('projectInfo', JSON.stringify(data));
           Project.loadAll(data);
-          console.log('2nd part worked!');
         }
       );
     }
