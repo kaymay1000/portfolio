@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
   <script id="template" type="text/x-handlebars-template">
-    <article class="project-template">
-      <a src="{{fileSource}}" id="title">{{title}}</a>
+    <article class="project-template center">
+      <a href="{{fileSource}}" id="title">{{title}}</a>
       <p id="date-created">Date Created: {{dateCreated}}</p>
       <img src="{{image}}">
       <p id="description">About this Project: {{description}}</p>
@@ -17,7 +17,7 @@
 </head>
 <body>
   <header>
-    <section id="header">
+    <section id="header" class="center">
       <h1>Kaylee Alvarado</h1>
       <p>Software Developer in the Making</p>
     </section>
@@ -31,6 +31,7 @@
     </nav>
   </header>
   <main>
+    <div class="wrapper">
     <section id="home" class="tab-content">
       <h1>Welcome to my Site!</h1>
       <p>Thanks for stopping by.</p>
@@ -51,8 +52,10 @@
       <p>Phone: (206) 948-8950</p>
       <p>Email: kaymay1000@gmail.com</p>
     </section>
+    <div class="push"></div>
+  </div>
   </main>
-  <footer>KMA's Software Development Portfolio | &copy; 2016</footer>
+  <footer class="footer center">KMA's Software Development Portfolio | &copy; 2016</footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <script src="scripts/models/portfolio.js"></script>
