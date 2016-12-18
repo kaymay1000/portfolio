@@ -1,13 +1,29 @@
+* {
+  margin: 0; /*for sticky footer*/
+}
 html {
+  height: 100%;
   min-height: 100%;
   font-family: 'Open Sans Condensed', sans-serif;
 }
 body {
-  background-color: plum; /*For browsers that don't support the linear-gradient property*/
+  height: 100%;
+  min-height: 100%;
+  background-color: orchid; /*for browsers that don't support the linear-gradient property*/
   background-image: linear-gradient(white, lavender, plum, orchid);
+  background-repeat: no-repeat;
+}
+.center {
+  text-align: center;
+}
+#title {
+  font-size: 30px;
+}
+#date-created {
+  font-size: 18px;
+  margin: 10px;
 }
 #header {
-  text-align: center;
   font-family: cursive;
   font-family: 'Amatic SC', cursive;
 }
@@ -16,13 +32,15 @@ body {
   margin: 10px 0px;
   font-size: 60px;
 }
-
 #header > p {
   font-weight: bold;
   margin: 5px 0px;
   font-size: 30px;
 }
-
+img {
+  height: 225px;
+  width: 225px;
+}
 nav {
   padding: 15px;
   width: 550px;
@@ -40,10 +58,26 @@ nav {
   border-radius: 12px;
   border-color: grey;
 }
+#home {
+  padding: 25px;
+}
 #home > h1 {
   font-size: 45px;
 }
-a:link, a:visited{
-  color: black;
+.nav-item > a:link, a:visited {
   text-decoration: none;
+}
+a:link, a:visited {
+  color: black;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+.footer, .push {
+  font-size: 20px;
+  font-weight: bolder;
+  height: 4em;
 }
