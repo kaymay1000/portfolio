@@ -1,0 +1,6 @@
+What (I think) I need to do for portfolio 11 assignment:
+
+1. include page.js script tag in my index.html
+2. create a routes.js file and specify desired routes to different areas of my site
+and be sure to call page() at the bottom of the file
+3. update main nav so that each tab is assigned to a specific route
