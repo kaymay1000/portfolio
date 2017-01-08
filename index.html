@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
   <script id="template" type="text/x-handlebars-template">
-    <article class="project-template center">
+    <article class="project-template center" data-difficulty="{{difficulty}}">
       <a href="{{fileSource}}" id="title">{{title}}</a>
       <p id="date-created">Date Created: {{dateCreated}}</p>
+      <p id="difficulty">Difficulty: {{difficulty}}</p>
       <img src="{{image}}">
       <p id="description">About this Project: {{description}}</p>
     </article>
@@ -19,7 +20,7 @@
   <header>
     <section id="header" class="center">
       <h1>Kaylee Alvarado</h1>
-      <p>Software Developer in the Making</p>
+      <p>Software Developer To-Be</p>
     </section>
     <nav class="main-nav">
         <ul>
@@ -31,13 +32,19 @@
     </nav>
   </header>
   <main>
-    <div class="wrapper">
     <section id="home" class="tab-content">
       <h1>Welcome to my Site!</h1>
       <p>Thanks for stopping by.</p>
       <p>Click around to check out some of the work I've done through Code Fellows, a software development program based in Seattle, WA.</p>
     </section>
-    <section id="projects" class="tab-content"></section>
+    <section id="projects" class="tab-content">
+    <select id="difficulty-filter">
+      <option value="">Filter by Project Difficulty</option>
+      <option value="simple">Simple</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+    </select>
+    </section>
     <section id="aboutMe" class="tab-content">
       <h1>A little bit about me:</h1>
       <ul>
@@ -47,13 +54,11 @@
     </section>
     <section id="contactMe" class="tab-content">
       <h1>Contact Me</h1>
-      <p>If you have any inquires about my work, I can be reached at any of the following. Thanks for reaching out!</p>
+      <p>If you have any inquires about my work, I can be reached at either of the following. Thanks for reaching out!</p>
       <p>Kaylee Alvarado</p>
       <p>Phone: (206) 948-8950</p>
       <p>Email: kaymay1000@gmail.com</p>
     </section>
-    <div class="push"></div>
-  </div>
   </main>
   <footer class="footer center">KMA's Software Development Portfolio | &copy; 2016</footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

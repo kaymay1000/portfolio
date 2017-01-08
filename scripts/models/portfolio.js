@@ -5,6 +5,7 @@
   function Project (obj) {
     this.title = obj.title;
     this.dateCreated = obj.dateCreated;
+    this.difficulty = obj.difficulty;
     this.image = obj.image;
     this.description = obj.description;
     this.fileSource = obj.fileSource;
@@ -24,21 +25,42 @@
     });
   };
 
-  Project.fetchAll = function() {
+  Project.fetchAll = function(callback) {
     if (localStorage.projectInfo) {
       var lsProject = JSON.parse(localStorage.getItem('projectInfo'));
       Project.loadAll(lsProject);
+      callback();
     } else {
       $.getJSON('../../data/projectInfo.json').then(
         function(data) {
           localStorage.setItem('projectInfo', JSON.stringify(data));
           Project.loadAll(data);
+          callback();
         }
       );
     }
   };
 
-  Project.fetchAll();
+  Project.byDifficulty = function() {
+    var projectsByDifficulty = [];
+    Project.allProjects.map(function(currProject) {
+      if (currProject.difficulty === 'advanced') {
+        projectsByDifficulty.push(currProject);
+      }
+    });
+    Project.allProjects.map(function(currProject) {
+      if (currProject.difficulty === 'intermediate') {
+        projectsByDifficulty.push(currProject);
+      }
+    });
+    Project.allProjects.map(function(currProject) {
+      if (currProject.difficulty === 'simple') {
+        projectsByDifficulty.push(currProject);
+      }
+    })
+    console.log(projectsByDifficulty, 'projects by difficulty array');
+    return projectsByDifficulty;
+  }
   module.Project = Project;
 
 })(window);
