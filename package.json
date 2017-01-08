@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "301 Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaymay1000/portfolio.git"
+  },
+  "author": "Kaylee Alvarado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaymay1000/portfolio/issues"
+  },
+  "homepage": "https://github.com/kaymay1000/portfolio#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
